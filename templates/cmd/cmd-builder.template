@@ -1,0 +1,11 @@
+/*
+   Name: "command-builder.js"
+   Description: "class to build the command used for telegram requests"
+*/
+
+const { #command-list# } = require('.'),
+    cmds = [#command-list-instance#]
+
+module.exports = { 
+    cmd : strCmd => cmds.filter(f => f.strCmd === strCmd)[0]
+}

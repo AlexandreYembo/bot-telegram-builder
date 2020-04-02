@@ -1,0 +1,23 @@
+/*
+   Name: "command-base.js"
+   Description: "Command base to match generic callbacks used for telegram requests"
+*/
+
+const resource = require(#resource_path#);
+
+class CommandBase {
+    constructor(strCmd){
+        this.strCmd = strCmd;
+    }
+   
+    exec(param){
+        return null;
+    }
+
+    setLanguage(language){
+        this.language = language;
+        this.resource = resource.getResource(language);
+    }
+}
+
+module.exports = CommandBase;
